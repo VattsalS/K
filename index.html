@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kaizen Creative Media</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background-color: #0f0f0f;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+section {
+    padding: 80px 0;
+}
+
+h1, h2, h3 {
+    font-weight: 600;
+}
+
+p {
+    color: #b3b3b3;
+    margin-top: 15px;
+}
+
+/* HERO */
+.hero {
+    text-align: center;
+    padding: 120px 20px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    max-width: 800px;
+    margin: auto;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-top: 20px;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 12px 28px;
+    background: #ffffff;
+    color: #000000;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 30px;
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    background: #cccccc;
+}
+
+/* ABOUT */
+.about {
+    text-align: center;
+}
+
+/* SERVICES */
+.services {
+    background-color: #151515;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.service-card {
+    background: #1c1c1c;
+    padding: 30px;
+    border-radius: 12px;
+    transition: 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    background: #222222;
+}
+
+/* FAQ */
+.faq-item {
+    margin-top: 30px;
+}
+
+.faq-item h3 {
+    font-size: 1.1rem;
+}
+
+/* CONTACT */
+.contact form {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact input,
+.contact textarea {
+    padding: 14px;
+    border-radius: 8px;
+    border: none;
+    background: #1c1c1c;
+    color: white;
+}
+
+.contact input:focus,
+.contact textarea:focus {
+    outline: 1px solid #ffffff;
+}
+
+.contact button {
+    padding: 14px;
+    border: none;
+    border-radius: 30px;
+    background: #ffffff;
+    color: #000000;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.contact button:hover {
+    background: #cccccc;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 30px 0;
+    background: #0a0a0a;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    section {
+        padding: 60px 0;
+    }
+}
+</style>
+
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="container">
+        <h1>We Build AI-Powered Marketing Systems That Drive Real Growth</h1>
+        <p>Kaizen Creative Media helps brands turn attention into predictable revenue through strategy, automation, and continuous optimization.</p>
+        <a href="#contact" class="btn">Get a Free Strategy Call</a>
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about">
+    <div class="container">
+        <h2>About Us</h2>
+        <p>
+            At Kaizen Creative Media, we believe marketing should be a system — not random efforts.
+            Inspired by the philosophy of continuous improvement, we design growth frameworks
+            that combine AI, performance marketing, and strategic positioning to help businesses scale sustainably.
+        </p>
+    </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services">
+    <div class="container">
+        <h2 style="text-align:center;">Our Services</h2>
+        <div class="service-grid">
+            <div class="service-card">
+                <h3>Performance Marketing</h3>
+                <p>Strategic ad campaigns across Meta and Google focused on qualified leads and measurable ROI.</p>
+            </div>
+            <div class="service-card">
+                <h3>AI Automation Systems</h3>
+                <p>Smart follow-ups, CRM setups, and chatbot integrations that convert leads automatically.</p>
+            </div>
+            <div class="service-card">
+                <h3>Brand Positioning</h3>
+                <p>Offer refinement, messaging clarity, and authority-driven content strategies.</p>
+            </div>
+            <div class="service-card">
+                <h3>Growth Strategy</h3>
+                <p>End-to-end funnel planning designed to build predictable and scalable revenue systems.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq">
+    <div class="container">
+        <h2 style="text-align:center;">FAQs</h2>
+
+        <div class="faq-item">
+            <h3>Do you guarantee results?</h3>
+            <p>We focus on building proven systems and optimizing continuously to maximize performance and ROI.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>Do you work with international clients?</h3>
+            <p>Yes. We work with growth-focused businesses globally.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>What type of businesses do you work with?</h3>
+            <p>We work best with service-based, high-ticket, and growth-oriented brands.</p>
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+    <div class="container">
+        <h2 style="text-align:center;">Contact Us</h2>
+
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea rows="5" placeholder="Tell us about your business..." required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+</section>
+
+<footer>
+    © 2026 Kaizen Creative Media. All rights reserved.
+</footer>
+
+</body>
+</html>
