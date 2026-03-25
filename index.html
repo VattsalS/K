@@ -14,8 +14,8 @@
 }
 
 body {
-    background-color: #0f0f0f;
-    color: #ffffff;
+    background: #0b0b0b;
+    color: #eee;
     line-height: 1.6;
 }
 
@@ -25,17 +25,19 @@ body {
     margin: auto;
 }
 
-section {
-    padding: 80px 0;
+/* ACCENT COLOR */
+:root {
+    --accent: #00ff9d;
 }
 
-h1, h2, h3 {
-    font-weight: 600;
+/* HEADER/LOGO */
+header {
+    padding: 30px 0;
+    text-align: center;
 }
 
-p {
-    color: #b3b3b3;
-    margin-top: 15px;
+header img {
+    width: 180px; /* Logo size */
 }
 
 /* HERO */
@@ -46,21 +48,23 @@ p {
 
 .hero h1 {
     font-size: 3rem;
-    max-width: 800px;
+    max-width: 850px;
     margin: auto;
+    color: #fff;
 }
 
 .hero p {
     font-size: 1.2rem;
     margin-top: 20px;
+    color: #ccc;
 }
 
 .btn {
     display: inline-block;
     margin-top: 30px;
-    padding: 12px 28px;
-    background: #ffffff;
-    color: #000000;
+    padding: 12px 30px;
+    background: var(--accent);
+    color: #0a0a0a;
     text-decoration: none;
     font-weight: 600;
     border-radius: 30px;
@@ -68,53 +72,76 @@ p {
 }
 
 .btn:hover {
-    background: #cccccc;
+    background: #00e081;
 }
 
 /* ABOUT */
 .about {
     text-align: center;
+    padding-top: 60px;
+}
+
+.about p {
+    margin-top: 15px;
+    color: #bbb;
 }
 
 /* SERVICES */
 .services {
-    background-color: #151515;
+    background: #111;
+}
+
+.services h2 {
+    text-align: center;
 }
 
 .service-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 28px;
     margin-top: 40px;
 }
 
 .service-card {
-    background: #1c1c1c;
-    padding: 30px;
+    background: #161616;
+    padding: 28px;
     border-radius: 12px;
-    transition: 0.3s ease;
+    transition: 0.3s;
+    border: 1px solid #222;
+}
+
+.service-card h3 {
+    color: var(--accent);
 }
 
 .service-card:hover {
-    transform: translateY(-5px);
-    background: #222222;
+    border: 1px solid var(--accent);
+    transform: translateY(-4px);
 }
 
 /* FAQ */
 .faq-item {
-    margin-top: 30px;
+    margin-top: 32px;
+    border-bottom: 1px solid #222;
+    padding-bottom: 18px;
 }
 
 .faq-item h3 {
     font-size: 1.1rem;
+    color: var(--accent);
+}
+
+.faq-item p {
+    margin-top: 8px;
+    color: #aaa;
 }
 
 /* CONTACT */
 .contact form {
-    margin-top: 40px;
+    margin-top: 36px;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 18px;
 }
 
 .contact input,
@@ -122,45 +149,44 @@ p {
     padding: 14px;
     border-radius: 8px;
     border: none;
-    background: #1c1c1c;
-    color: white;
+    background: #1a1a1a;
+    color: #eee;
 }
 
 .contact input:focus,
 .contact textarea:focus {
-    outline: 1px solid #ffffff;
+    outline: 1px solid var(--accent);
 }
 
 .contact button {
     padding: 14px;
     border: none;
     border-radius: 30px;
-    background: #ffffff;
-    color: #000000;
+    background: var(--accent);
+    color: #0a0a0a;
     font-weight: 600;
     cursor: pointer;
     transition: 0.3s ease;
 }
 
 .contact button:hover {
-    background: #cccccc;
+    background: #00e081;
 }
 
 /* FOOTER */
 footer {
     text-align: center;
-    padding: 30px 0;
-    background: #0a0a0a;
+    padding: 24px 0;
     color: #666;
     font-size: 0.9rem;
+    margin-top: 40px;
 }
 
-/* MOBILE */
+/* RESPONSIVE */
 @media (max-width: 768px) {
     .hero h1 {
-        font-size: 2.2rem;
+        font-size: 2.4rem;
     }
-
     section {
         padding: 60px 0;
     }
@@ -170,83 +196,78 @@ footer {
 </head>
 <body>
 
-<!-- HERO -->
+<header>
+    <img src="kaizen-logo.png" alt="Kaizen Creative Media Logo">
+</header>
+
 <section class="hero">
     <div class="container">
-        <h1>We Build AI-Powered Marketing Systems That Drive Real Growth</h1>
-        <p>Kaizen Creative Media helps brands turn attention into predictable revenue through strategy, automation, and continuous optimization.</p>
-        <a href="#contact" class="btn">Get a Free Strategy Call</a>
+        <h1>We Build AI-Driven Marketing Systems That Drive Real Growth.</h1>
+        <p>Kaizen Creative Media turns attention into predictable revenue with strategy, automation & constant improvement.</p>
+        <a href="#contact" class="btn">Get Your Free Strategy Call</a>
     </div>
 </section>
 
-<!-- ABOUT -->
 <section class="about">
     <div class="container">
         <h2>About Us</h2>
-        <p>
-            At Kaizen Creative Media, we believe marketing should be a system — not random efforts.
-            Inspired by the philosophy of continuous improvement, we design growth frameworks
-            that combine AI, performance marketing, and strategic positioning to help businesses scale sustainably.
-        </p>
+        <p>Kaizen Creative Media is a modern marketing agency focused on building high-performance systems — not just ads. Our philosophy is continuous improvement, innovation, and measurable growth for every brand we work with.</p>
     </div>
 </section>
 
-<!-- SERVICES -->
 <section class="services">
     <div class="container">
-        <h2 style="text-align:center;">Our Services</h2>
+        <h2>Our Services</h2>
         <div class="service-grid">
             <div class="service-card">
                 <h3>Performance Marketing</h3>
-                <p>Strategic ad campaigns across Meta and Google focused on qualified leads and measurable ROI.</p>
+                <p>Strategic paid campaigns with measurable ROI across Meta & Google Ads.</p>
             </div>
             <div class="service-card">
-                <h3>AI Automation Systems</h3>
-                <p>Smart follow-ups, CRM setups, and chatbot integrations that convert leads automatically.</p>
+                <h3>AI Marketing Automation</h3>
+                <p>Chatbot flows, CRM automation & smart follow-ups that actually work.</p>
             </div>
             <div class="service-card">
-                <h3>Brand Positioning</h3>
-                <p>Offer refinement, messaging clarity, and authority-driven content strategies.</p>
+                <h3>Brand Messaging & Positioning</h3>
+                <p>Offer refinement and messaging that converts your audience into buyers.</p>
             </div>
             <div class="service-card">
                 <h3>Growth Strategy</h3>
-                <p>End-to-end funnel planning designed to build predictable and scalable revenue systems.</p>
+                <p>Systems and funnels designed for predictable scaling and long-term growth.</p>
             </div>
         </div>
     </div>
 </section>
 
-<!-- FAQ -->
 <section class="faq">
     <div class="container">
-        <h2 style="text-align:center;">FAQs</h2>
+        <h2>Frequently Asked Questions</h2>
 
         <div class="faq-item">
             <h3>Do you guarantee results?</h3>
-            <p>We focus on building proven systems and optimizing continuously to maximize performance and ROI.</p>
+            <p>We focus on building proven systems and optimizing performance to maximize ROI across the funnel.</p>
         </div>
 
         <div class="faq-item">
-            <h3>Do you work with international clients?</h3>
-            <p>Yes. We work with growth-focused businesses globally.</p>
+            <h3>Do you work internationally?</h3>
+            <p>Yes — we partner with growth-oriented brands around the world.</p>
         </div>
 
         <div class="faq-item">
-            <h3>What type of businesses do you work with?</h3>
-            <p>We work best with service-based, high-ticket, and growth-oriented brands.</p>
+            <h3>What businesses do you work with?</h3>
+            <p>Service-based, high-ticket & performance-driven brands looking for predictable scaling.</p>
         </div>
     </div>
 </section>
 
-<!-- CONTACT -->
 <section class="contact" id="contact">
     <div class="container">
-        <h2 style="text-align:center;">Contact Us</h2>
+        <h2>Contact Us</h2>
 
         <form>
             <input type="text" placeholder="Your Name" required>
             <input type="email" placeholder="Your Email" required>
-            <textarea rows="5" placeholder="Tell us about your business..." required></textarea>
+            <textarea rows="5" placeholder="Describe your business…" required></textarea>
             <button type="submit">Send Message</button>
         </form>
     </div>
